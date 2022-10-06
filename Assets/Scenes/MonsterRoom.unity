@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 1362843224}
   - component: {fileID: 1362843223}
   m_Layer: 0
-  m_Name: Chalice
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
