@@ -7,7 +7,7 @@ public class TileScript : MonoBehaviour
     public bool isSafe;
     void Start()
     {   
-        if(PublicVars.hasGoggles && !isSafe){
+        if(PublicVars.items["goggles"] && !isSafe){
             GetComponent<Rigidbody>().isKinematic = false;
         }
     }

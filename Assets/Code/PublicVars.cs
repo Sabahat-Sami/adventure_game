@@ -4,5 +4,10 @@ using UnityEngine;
 
 public static class PublicVars
 {
-    public static bool hasGoggles = false;
+    public static Dictionary<string, bool> items = new Dictionary <string, bool>
+    {
+        {"goggles", false},
+        {"boots", false},
+    };
+
 }
