@@ -8,6 +8,14 @@ public class GetObject : MonoBehaviour
 
 
     int speed = -25;
+
+    void Start()
+    {
+        if(PublicVars.items[pub_name] == true){
+            Destroy(this.gameObject);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
