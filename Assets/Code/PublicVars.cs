@@ -8,6 +8,7 @@ public static class PublicVars
     {
         {"goggles", false},
         {"boots", false},
+        {"chalice", false},
     };
 
 }
