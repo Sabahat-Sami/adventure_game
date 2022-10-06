@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.SceneManagement;
 public class PlayerCode : MonoBehaviour
 {
 
@@ -28,5 +28,18 @@ public class PlayerCode : MonoBehaviour
                 _agent.SetDestination(hit.point);
             }
         }
+        if(this.gameObject.transform.position.y < -10){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+    private void OnTriggerEnter(Collider other) {
+        if(other.CompareTag("Tile") && !other.GetComponent<TileScript>().isSafe){
+            StartCoroutine(WaitBeforeFalling());
+        }
+    }
+    IEnumerator WaitBeforeFalling(){
+        yield return new WaitForSeconds(1f);
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<NavMeshAgent>().enabled = false;
     }
 }
