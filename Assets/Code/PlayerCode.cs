@@ -25,11 +25,9 @@ public class PlayerCode : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 500))
             {
-                print(hit);
                 _agent.SetDestination(hit.point);
             }
             else{
-                print("None");
             }
         }
         if(this.gameObject.transform.position.y < -10){
