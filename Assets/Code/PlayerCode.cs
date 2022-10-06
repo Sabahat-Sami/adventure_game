@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.SceneManagement;
 public class PlayerCode : MonoBehaviour
 {
 
@@ -27,6 +27,9 @@ public class PlayerCode : MonoBehaviour
             {
                 _agent.SetDestination(hit.point);
             }
+        }
+        if(this.gameObject.transform.position.y < -10){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
