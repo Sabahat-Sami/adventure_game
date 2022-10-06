@@ -32,4 +32,14 @@ public class PlayerCode : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+    private void OnTriggerEnter(Collider other) {
+        if(other.CompareTag("Tile") && !other.GetComponent<TileScript>().isSafe){
+            StartCoroutine(WaitBeforeFalling());
+        }
+    }
+    IEnumerator WaitBeforeFalling(){
+        yield return new WaitForSeconds(1f);
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<NavMeshAgent>().enabled = false;
+    }
 }

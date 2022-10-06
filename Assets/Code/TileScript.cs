@@ -7,9 +7,7 @@ public class TileScript : MonoBehaviour
     public bool isSafe;
     void Start()
     {   
-        print(PublicVars.hasGoggles);
         if(PublicVars.hasGoggles && !isSafe){
-            print(PublicVars.hasGoggles);
             GetComponent<Rigidbody>().isKinematic = false;
         }
     }
@@ -17,12 +15,12 @@ public class TileScript : MonoBehaviour
         if(other.CompareTag("Player")){
             if(!isSafe){
                 StartCoroutine(WaitBeforeFalling());
-                GetComponent<Rigidbody>().isKinematic = false;
             }
         }
     }
     IEnumerator WaitBeforeFalling(){
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+        GetComponent<Rigidbody>().isKinematic = false;
     }
 
 }
