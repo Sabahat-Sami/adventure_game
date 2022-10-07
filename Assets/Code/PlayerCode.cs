@@ -74,6 +74,13 @@ public class PlayerCode : MonoBehaviour
         {
             SceneManager.LoadScene(exit_lv_name);
         }
+        if(other.CompareTag("Gap")){
+            Rigidbody player = GetComponent<Rigidbody>();
+            player.isKinematic = false;
+            player.AddForce(-100f, 0f, 0f);
+
+            GetComponent<NavMeshAgent>().enabled = false;
+        }
 
 
     }
