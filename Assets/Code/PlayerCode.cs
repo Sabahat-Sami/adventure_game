@@ -77,7 +77,7 @@ public class PlayerCode : MonoBehaviour
         if(other.CompareTag("Gap")){
             Rigidbody player = GetComponent<Rigidbody>();
             player.isKinematic = false;
-            player.AddForce(-100f, 0f, 0f);
+            player.AddForce(-50f, 0f, 0f);
 
             GetComponent<NavMeshAgent>().enabled = false;
         }
