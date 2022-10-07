@@ -27,6 +27,12 @@ public class GetObject : MonoBehaviour
         if(other.CompareTag("Player")){
             Destroy(this.gameObject);
             PublicVars.items[pub_name] = true;
+
+
+            if(pub_name == "boots")
+            {
+                other.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 15f;
+            }
         }
     }
 }
