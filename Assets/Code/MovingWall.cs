@@ -15,11 +15,16 @@ public class MovingWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if(transform.eulerAngles.z == 90f){
-            _rb.velocity = new Vector3(-2, 0, 0);
+        if(PublicVars.items["goggles"]){
+            _rb.velocity = new Vector3(0, 0, 0);
         }
         else{
-            _rb.velocity = new Vector3(2, 0, 0);
+            if(transform.eulerAngles.z == 90f){
+                _rb.velocity = new Vector3(-2, 0, 0);
+            }
+            else{
+                _rb.velocity = new Vector3(2, 0, 0);
+            }
         }
 
     }

@@ -15,7 +15,7 @@ public class PlayerCode : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         mainCam = Camera.main;
         if(PublicVars.items["boots"]){
-            _agent.speed = 20f;
+            _agent.speed = 15f;
         }
     }
 
@@ -31,9 +31,7 @@ public class PlayerCode : MonoBehaviour
 
                 _agent.SetDestination(hit.point);
             }
-            else{
-                print("hello");
-            }
+
         }
         if(this.gameObject.transform.position.y < -10){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

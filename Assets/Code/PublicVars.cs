@@ -7,7 +7,7 @@ public static class PublicVars
     public static Dictionary<string, bool> items = new Dictionary <string, bool>
     {
         {"goggles", false},
-        {"boots", true},
+        {"boots", false},
         {"chalice", false},
         {"bow", false},
         {"key", false}
