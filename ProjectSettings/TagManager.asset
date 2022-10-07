@@ -17,14 +17,16 @@ TagManager:
   - ToMonster
   - ToWallClose
   - ToMaze
+  - Door
+  - MovingWall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - MovingWall
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
