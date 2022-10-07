@@ -22,9 +22,9 @@ public class DamageControl : MonoBehaviour
 
         if(health.playerHealth == 0) // reset game
         {
-            foreach(var (key, value) in PublicVars.items)
+            foreach (var entry in PublicVars.items)
             {
-                PublicVars.items[key] = false;
+                PublicVars.items[entry.Key] = false;
             }
 
             SceneManager.LoadScene("MainStage");
