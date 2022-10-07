@@ -8,6 +8,8 @@ public class PlayerCode : MonoBehaviour
 
     NavMeshAgent _agent;
     Camera mainCam;
+    public HealthControl damager;
+
     
     // Start is called before the first frame update
     void Start()
@@ -40,7 +42,7 @@ public class PlayerCode : MonoBehaviour
         }
         if (other.CompareTag("Monster"))
         {
-            // take damage
+            damager.playerHealth -= 1;
         }
         
         }
