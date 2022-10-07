@@ -106,7 +106,7 @@ public class PlayerCode : MonoBehaviour
     }
 
     IEnumerator WaitBeforeFalling(){
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.3f);
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<NavMeshAgent>().enabled = false;
     }
