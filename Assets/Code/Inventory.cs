@@ -31,6 +31,7 @@ public class Inventory : MonoBehaviour
         switch (other.tag)
         {
             case "Boots":
+                print("hit boots");
                 Destroy(other.gameObject);
                 haveBoots = true;
                 break;
@@ -51,6 +52,7 @@ public class Inventory : MonoBehaviour
                 break;
 
             case "Key":
+                print("hit key");
                 Destroy(other.gameObject);
                 haveKey = true;
                 break;

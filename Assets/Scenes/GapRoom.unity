@@ -609,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000014021913142, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
       propertyPath: m_TagString
-      value: Door
+      value: ToMain
       objectReference: {fileID: 0}
     - target: {fileID: 1000014021913142, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1080,6 +1080,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c3629bbdcda274baac1d909a116ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damager: {fileID: 0}
+  main_lv_name: MainStage
+  gap_lv_name: GapRoom
+  wall_lv_name: 
+  maze_lv_name: FallingMaze
+  monster_lv_name: MonsterRoom
+  exit_lv_name: 
 --- !u!195 &1869720684
 NavMeshAgent:
   m_ObjectHideFlags: 0
