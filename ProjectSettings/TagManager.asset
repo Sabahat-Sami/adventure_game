@@ -6,20 +6,15 @@ TagManager:
   tags:
   - Tile
   - Door
-  - Boots
-  - Goggles
-  - Bridge
-  - Key
-  - Monster
-  - Bow
+  - MovingWall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - MovingWall
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 

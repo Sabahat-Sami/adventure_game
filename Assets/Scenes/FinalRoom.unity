@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe795af87540b34eb43b0a24dcd7d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pub_name: chalice
+  pub_name: key
 --- !u!1001 &291575716
 PrefabInstance:
   m_ObjectHideFlags: 0
