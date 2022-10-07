@@ -8,7 +8,7 @@ public class PlayerCode : MonoBehaviour
 
     NavMeshAgent _agent;
     Camera mainCam;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +41,13 @@ public class PlayerCode : MonoBehaviour
         if(other.CompareTag("Tile") && !other.GetComponent<TileScript>().isSafe){
             StartCoroutine(WaitBeforeFalling());
         }
-    }
+        if (other.CompareTag("Monster"))
+        {
+            // take damage
+        }
+        
+        }
+
     IEnumerator WaitBeforeFalling(){
         yield return new WaitForSeconds(1f);
         GetComponent<Rigidbody>().isKinematic = false;
