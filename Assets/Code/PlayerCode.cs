@@ -19,7 +19,7 @@ public class PlayerCode : MonoBehaviour
     public string monster_lv_name = "MonsterRoom";
     int arrowForce = 500;
     bool arrowSpawning = false;
-    public float arrowDelay = 0.1f;
+    public float arrowDelay = 0.05f;
     public string exit_lv_name = "FinalRoom";
 
     
