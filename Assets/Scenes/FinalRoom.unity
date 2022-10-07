@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 447480682}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: ToMain
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1108,13 +1108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c3629bbdcda274baac1d909a116ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damager: {fileID: 0}
-  main_lv_name: MainStage
-  gap_lv_name: GapRoom
-  wall_lv_name: 
-  maze_lv_name: FallingMaze
-  monster_lv_name: MonsterRoom
-  exit_lv_name: 
 --- !u!195 &1869720684
 NavMeshAgent:
   m_ObjectHideFlags: 0
