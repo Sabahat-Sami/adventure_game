@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37312183, g: 0.38074157, b: 0.35872602, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731224, g: 0.38074207, b: 0.35872674, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -761,6 +761,7 @@ GameObject:
   - component: {fileID: 719636656}
   - component: {fileID: 719636655}
   - component: {fileID: 719636654}
+  - component: {fileID: 719636658}
   m_Layer: 0
   m_Name: Boots
   m_TagString: Boots
@@ -776,7 +777,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719636653}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -847,6 +848,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &719636658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719636653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320d655a1758c4fc4aa468a3cfe72b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  empty: {fileID: 0}
+  boots: {fileID: 21300000, guid: 9c3b623b88e6345ab8d7ca1b1c65c73c, type: 3}
+  goggles: {fileID: 0}
+  bridge: {fileID: 0}
+  key: {fileID: 0}
+  bow: {fileID: 0}
+  inventory: []
+  haveBoots: 0
+  haveGoggles: 0
+  haveBridge: 0
+  haveKey: 0
+  haveBow: 0
 --- !u!1001 &723228097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1047,7 +1072,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980500487}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

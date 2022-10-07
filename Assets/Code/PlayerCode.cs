@@ -38,6 +38,13 @@ public class PlayerCode : MonoBehaviour
         if(other.CompareTag("Tile") && !other.GetComponent<TileScript>().isSafe){
             StartCoroutine(WaitBeforeFalling());
         }
+        if(other.CompareTag("Gap")){
+            Rigidbody player = GetComponent<Rigidbody>();
+            player.isKinematic = false;
+            player.AddForce(-100f, 0f, 0f);
+
+            GetComponent<NavMeshAgent>().enabled = false;
+        }
         if (other.CompareTag("Monster"))
         {
             // take damage

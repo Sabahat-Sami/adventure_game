@@ -12,6 +12,7 @@ TagManager:
   - Key
   - Monster
   - Bow
+  - Gap
   layers:
   - Default
   - TransparentFX
