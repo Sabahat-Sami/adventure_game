@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44706059, g: 0.49696118, b: 0.5750926, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -267,6 +267,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 23000011902774622, guid: f6b1e59b3ae85764684d95c6a6bb1483, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23000011902774622, guid: f6b1e59b3ae85764684d95c6a6bb1483, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6b1e59b3ae85764684d95c6a6bb1483, type: 3}
 --- !u!1001 &630649789
@@ -323,6 +331,14 @@ PrefabInstance:
     - target: {fileID: 4625144701005868023, guid: c9ca30ae03bc44740825484f57fb887f, type: 3}
       propertyPath: m_Name
       value: Moving Wall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647129306360982051, guid: c9ca30ae03bc44740825484f57fb887f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647129306360982051, guid: c9ca30ae03bc44740825484f57fb887f, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9ca30ae03bc44740825484f57fb887f, type: 3}
@@ -692,14 +708,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444232525}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.88034797, y: -0.106507756, z: 0.2358885, w: 0.39749238}
+  m_LocalPosition: {x: 1.4, y: 40.5, z: 17.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 131.4, y: -30, z: 0}
 --- !u!1 &1513843398 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000012863728778, guid: f6b1e59b3ae85764684d95c6a6bb1483, type: 3}
@@ -1037,7 +1053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347a885c7f455c24a970f2d7800e870f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: MainStage
 --- !u!64 &2094198424
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1156,6 +1171,14 @@ PrefabInstance:
     - target: {fileID: 4625144701005868023, guid: c9ca30ae03bc44740825484f57fb887f, type: 3}
       propertyPath: m_Name
       value: Moving Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647129306360982051, guid: c9ca30ae03bc44740825484f57fb887f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647129306360982051, guid: c9ca30ae03bc44740825484f57fb887f, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9ca30ae03bc44740825484f57fb887f, type: 3}
