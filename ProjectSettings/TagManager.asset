@@ -20,6 +20,7 @@ TagManager:
   - Door
   - MovingWall
   - Gap
+  - Arrow
   layers:
   - Default
   - TransparentFX

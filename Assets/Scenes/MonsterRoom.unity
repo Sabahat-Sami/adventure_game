@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44372067, g: 0.49306363, b: 0.5726037, a: 1}
+  m_IndirectSpecularColor: {r: 0.44371977, g: 0.49306238, b: 0.5726023, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -720,6 +720,7 @@ MonoBehaviour:
   wall_lv_name: 
   maze_lv_name: FallingMaze
   monster_lv_name: MonsterRoom
+  arrowDelay: 0.01
   exit_lv_name: 
 --- !u!54 &493491911
 Rigidbody:

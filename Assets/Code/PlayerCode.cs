@@ -18,7 +18,10 @@ public class PlayerCode : MonoBehaviour
     public string maze_lv_name = "FallingMaze";
     public string monster_lv_name = "MonsterRoom";
     int arrowForce = 500;
+    bool arrowSpawning = false;
+    public float arrowDelay = 0.1f;
     public string exit_lv_name = "FinalRoom";
+
     
     // Start is called before the first frame update
     void Start()
@@ -45,15 +48,14 @@ public class PlayerCode : MonoBehaviour
             }
 
         }
-        else if (Input.GetMouseButton(1) && PublicVars.items["bow"])
+        else if (Input.GetMouseButton(1) && PublicVars.items["bow"] && !arrowSpawning)
         {
             RaycastHit hit;
 
             if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 500))
             {
                 transform.LookAt(hit.point);
-                GameObject newArrow = Instantiate(arrow, transform.position, transform.rotation);
-                newArrow.GetComponent<Rigidbody>().AddForce(transform.forward * arrowForce);
+                StartCoroutine(ArrowWait());
             }
 
         }
@@ -110,4 +112,14 @@ public class PlayerCode : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = false;
         GetComponent<NavMeshAgent>().enabled = false;
     }
+
+    IEnumerator ArrowWait()
+    {
+        arrowSpawning = true;
+        yield return new WaitForSeconds(arrowDelay);
+        GameObject newArrow = Instantiate(arrow, transform.position, transform.rotation);
+        newArrow.GetComponent<Rigidbody>().AddForce(transform.forward * arrowForce);
+        arrowSpawning = false;
+    }
+
 }
