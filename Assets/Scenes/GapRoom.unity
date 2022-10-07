@@ -255,7 +255,9 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4180210184176086330, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
+    - {fileID: 1869720678, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
 --- !u!1 &286261987
 GameObject:
@@ -5568,6 +5570,7 @@ GameObject:
   - component: {fileID: 1151946631}
   - component: {fileID: 1151946630}
   - component: {fileID: 1151946629}
+  - component: {fileID: 1151946633}
   m_Layer: 0
   m_Name: Plane (2)
   m_TagString: ToMain
@@ -6309,7 +6312,12 @@ MonoBehaviour:
   bridge: {fileID: 21300000, guid: 0dcdc47df3c9941ed970839ddb124e5d, type: 3}
   key: {fileID: 21300000, guid: e798ff7ee54d44638a4075afe13f1a89, type: 3}
   bow: {fileID: 21300000, guid: 0ed9ca822e5174daa844443ef74ef46f, type: 3}
-  inventory: []
+  inventory:
+  - {fileID: 2112092856}
+  - {fileID: 2112092855}
+  - {fileID: 2112092854}
+  - {fileID: 2112092853}
+  - {fileID: 2112092852}
 --- !u!1 &1917204883
 GameObject:
   m_ObjectHideFlags: 0
