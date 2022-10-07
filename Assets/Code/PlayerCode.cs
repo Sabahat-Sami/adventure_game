@@ -40,11 +40,6 @@ public class PlayerCode : MonoBehaviour
         if(other.CompareTag("Tile") && !other.GetComponent<TileScript>().isSafe){
             StartCoroutine(WaitBeforeFalling());
         }
-        if (other.CompareTag("Monster"))
-        {
-            damager.playerHealth -= 1;
-        }
-        
         }
 
     IEnumerator WaitBeforeFalling(){
