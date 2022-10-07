@@ -3,13 +3,7 @@ guid: 320d655a1758c4fc4aa468a3cfe72b43
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - empty: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  - boots: {fileID: 21300000, guid: 9c3b623b88e6345ab8d7ca1b1c65c73c, type: 3}
-  - goggles: {fileID: 21300000, guid: e6be628af417d4894bdf1dbb526e9ee9, type: 3}
-  - bridge: {fileID: 21300000, guid: 0dcdc47df3c9941ed970839ddb124e5d, type: 3}
-  - key: {fileID: 21300000, guid: e798ff7ee54d44638a4075afe13f1a89, type: 3}
-  - bow: {fileID: 21300000, guid: 0ed9ca822e5174daa844443ef74ef46f, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
