@@ -10,6 +10,7 @@ public class PlayerCode : MonoBehaviour
     NavMeshAgent _agent;
     Camera mainCam;
     public HealthControl health;
+    public GameObject arrow;
 
     public string main_lv_name = "MainStage";
     public string gap_lv_name = "GapRoom";
@@ -17,6 +18,8 @@ public class PlayerCode : MonoBehaviour
     public string maze_lv_name = "FallingMaze";
     public string monster_lv_name = "MonsterRoom";
     public string exit_lv_name = "";
+
+    int arrowForce = 500;
     
     // Start is called before the first frame update
     void Start()
@@ -39,6 +42,18 @@ public class PlayerCode : MonoBehaviour
             {
 
                 _agent.SetDestination(hit.point);
+            }
+
+        }
+        else if (Input.GetMouseButton(1) && PublicVars.items["bow"])
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 500))
+            {
+                transform.LookAt(hit.point);
+                GameObject newArrow = Instantiate(arrow, transform.position, transform.rotation);
+                newArrow.GetComponent<Rigidbody>().AddForce(transform.forward * arrowForce);
             }
 
         }

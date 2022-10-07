@@ -656,6 +656,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee943463271e40d4a2a035437032e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &356656362 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7071502598602037335, guid: d3904b66be0b74df19758a5ad0bd0d06, type: 3}
+  m_PrefabInstance: {fileID: 203134460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &424530793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7817957715886744980, guid: 3c402d89955a94ee889b1e56bfffa8f8, type: 3}
@@ -689,7 +700,7 @@ MonoBehaviour:
   - {fileID: 756802533}
   - {fileID: 282977206}
   - {fileID: 1822437502}
-  - {fileID: 0}
+  - {fileID: 356656362}
 --- !u!114 &493491910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,7 +713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c3629bbdcda274baac1d909a116ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
+  health: {fileID: 313577188}
+  arrow: {fileID: 6990614567828900198, guid: fd076d5fead3444a187dfab2dbada411, type: 3}
   main_lv_name: MainStage
   gap_lv_name: GapRoom
   wall_lv_name: 
@@ -758,6 +770,10 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 313577188}
+    - target: {fileID: 2417002077814271147, guid: 3c402d89955a94ee889b1e56bfffa8f8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7817957715886744976, guid: 3c402d89955a94ee889b1e56bfffa8f8, type: 3}
       propertyPath: m_Name
       value: Mummy Enemy (1)
@@ -1569,6 +1585,10 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 313577188}
+    - target: {fileID: 2417002077814271147, guid: 3c402d89955a94ee889b1e56bfffa8f8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7817957715886744976, guid: 3c402d89955a94ee889b1e56bfffa8f8, type: 3}
       propertyPath: m_Name
       value: Mummy Enemy
