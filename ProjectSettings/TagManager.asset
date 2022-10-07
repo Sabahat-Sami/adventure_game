@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tile
-  - Door
-  - MovingWall
   - Boots
   - Goggles
   - Bridge
@@ -19,15 +17,14 @@ TagManager:
   - ToMonster
   - ToWallClose
   - ToMaze
-
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - MovingWall
+  - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 

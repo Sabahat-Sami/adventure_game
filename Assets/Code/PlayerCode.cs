@@ -22,24 +22,21 @@ public class PlayerCode : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         mainCam = Camera.main;
-        if(PublicVars.items["boots"]){
-            _agent.speed = 15f;
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButton(0))
-        {   
-
+        {
             RaycastHit hit;
             if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 500))
             {
-
                 _agent.SetDestination(hit.point);
             }
-
+            else{
+            }
         }
         if(this.gameObject.transform.position.y < -10){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
