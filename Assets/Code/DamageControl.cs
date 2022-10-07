@@ -10,26 +10,27 @@ public class DamageControl : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
-        {
+        {   
             damage();
         }
     }
 
     public void damage()
     {
-        health.playerHealth -= 1;
+        PublicVars.playerHealth -= 1;
         health.UpdateHealth();
 
-        if(health.playerHealth == 0) // reset game
-        {
-            foreach (var entry in PublicVars.items)
+        if(PublicVars.playerHealth == 0) // reset game
+        {   
+            List<string> keyList = new List<string>(PublicVars.items.Keys);
+            for(int i = 0; i < keyList.Count; i++)
             {
-                PublicVars.items[entry.Key] = false;
+                PublicVars.items[keyList[i]] = false;
             }
 
             SceneManager.LoadScene("MainStage");
 
-            health.playerHealth = 3;
+            PublicVars.playerHealth = 3;
         }
     }
 
