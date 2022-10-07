@@ -58,7 +58,21 @@ public class PlayerCode : MonoBehaviour
 
         }
         if(this.gameObject.transform.position.y < -10){
+            PublicVars.playerHealth -= 1;
+            health.UpdateHealth();
+            if(PublicVars.playerHealth == 0) // reset game
+                {   
+                List<string> keyList = new List<string>(PublicVars.items.Keys);
+                for(int i = 0; i < keyList.Count; i++)
+                {
+                    PublicVars.items[keyList[i]] = false;
+                }
+                SceneManager.LoadScene("MainStage");
+                PublicVars.playerHealth = 3;
+                }
+            else{
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
     private void OnTriggerEnter(Collider other) {
