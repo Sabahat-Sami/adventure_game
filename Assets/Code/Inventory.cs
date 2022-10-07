@@ -14,13 +14,6 @@ public class Inventory : MonoBehaviour
     public Sprite bow;
     [SerializeField] private Image[] inventory;
 
-    //public bool haveBoots = false;
-    //public bool haveGoggles = false;
-    //public bool haveBridge = false;
-    //public bool haveKey = false;
-    //public bool haveBow = false;
-
-
     private void Start()
     {
         updateInventory();

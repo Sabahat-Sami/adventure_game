@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+
 public class PlayerCode : MonoBehaviour
 {
 
     NavMeshAgent _agent;
     Camera mainCam;
-    public HealthControl damager;
+    public HealthControl health;
 
     public string main_lv_name = "MainStage";
     public string gap_lv_name = "GapRoom";
