@@ -17,7 +17,6 @@ public class PlayerCode : MonoBehaviour
     public string wall_lv_name = "ClosingWalls";
     public string maze_lv_name = "FallingMaze";
     public string monster_lv_name = "MonsterRoom";
-    public string exit_lv_name = "";
     int arrowForce = 500;
     public string exit_lv_name = "FinalRoom";
     
