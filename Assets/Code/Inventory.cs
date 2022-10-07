@@ -14,13 +14,6 @@ public class Inventory : MonoBehaviour
     public Sprite bow;
     [SerializeField] private Image[] inventory;
 
-    //public bool haveBoots = false;
-    //public bool haveGoggles = false;
-    //public bool haveBridge = false;
-    //public bool haveKey = false;
-    //public bool haveBow = false;
-
-
     private void Start()
     {
         updateInventory();
@@ -67,7 +60,7 @@ public class Inventory : MonoBehaviour
         if (PublicVars.items["boots"])
         {
             inventory[0].sprite = boots;
-            inventory[0].transform.Rotate(new Vector3(0, 0, -90));
+            //inventory[0].transform.Rotate(new Vector3(0, 0, -90));
 
         }
         else{

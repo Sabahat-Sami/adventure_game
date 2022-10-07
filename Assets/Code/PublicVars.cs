@@ -10,8 +10,8 @@ public static class PublicVars
         {"boots", false},
         {"chalice", false},
         {"bow", false},
-        {"bridge", false},
-        {"key", false}
+        {"key", false},
+        {"bridge", false}
     };
 
 }
