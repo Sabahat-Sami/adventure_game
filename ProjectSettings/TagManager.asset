@@ -5,6 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tile
+  - Boots
+  - Goggles
+  - Bridge
+  - Key
+  - Monster
+  - Bow
+  - ToMain
+  - ToGap
+  - ToExit
+  - ToMonster
+  - ToWallClose
+  - ToMaze
   - Door
   - MovingWall
   layers:
