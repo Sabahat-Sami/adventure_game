@@ -13,6 +13,8 @@ TagManager:
   - Key
   - Monster
   - Bow
+
+  - Gap
   - ToMain
   - ToGap
   - ToExit
