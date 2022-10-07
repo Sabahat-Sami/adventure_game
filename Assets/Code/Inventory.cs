@@ -14,11 +14,12 @@ public class Inventory : MonoBehaviour
     public Sprite bow;
     [SerializeField] private Image[] inventory;
 
-    public bool haveBoots = false;
-    public bool haveGoggles = false;
-    public bool haveBridge = false;
-    public bool haveKey = false;
-    public bool haveBow = false;
+    //public bool haveBoots = false;
+    //public bool haveGoggles = false;
+    //public bool haveBridge = false;
+    //public bool haveKey = false;
+    //public bool haveBow = false;
+
 
     private void Start()
     {
@@ -33,28 +34,28 @@ public class Inventory : MonoBehaviour
             case "Boots":
                 print("hit boots");
                 Destroy(other.gameObject);
-                haveBoots = true;
+                PublicVars.items["boots"] = true;
                 break;
 
             case "Bow":
                 Destroy(other.gameObject);
-                haveBow = true;
+                PublicVars.items["bow"] = true;
                 break;
 
             case "Goggles":
                 Destroy(other.gameObject);
-                haveGoggles = true;
+                PublicVars.items["goggles"] = true;
                 break;
 
             case "Bridge":
                 Destroy(other.gameObject);
-                haveBridge = true;
+                PublicVars.items["bridge"] = true;
                 break;
 
             case "Key":
                 print("hit key");
                 Destroy(other.gameObject);
-                haveKey = true;
+                PublicVars.items["key"] = true;
                 break;
         }
 
@@ -63,7 +64,7 @@ public class Inventory : MonoBehaviour
 
     public void updateInventory()
     {
-        if (haveBoots)
+        if (PublicVars.items["boots"])
         {
             inventory[0].sprite = boots;
             inventory[0].transform.Rotate(new Vector3(0, 0, -90));
@@ -72,7 +73,7 @@ public class Inventory : MonoBehaviour
         else{
             inventory[0].sprite = empty;
         }
-        if (haveGoggles)
+        if (PublicVars.items["goggles"])
         {
             inventory[1].sprite = goggles;
         }
@@ -80,7 +81,7 @@ public class Inventory : MonoBehaviour
         {
             inventory[1].sprite = empty;
         }
-        if (haveBridge)
+        if (PublicVars.items["bridge"])
         {
             inventory[2].sprite = bridge;
         }
@@ -88,7 +89,7 @@ public class Inventory : MonoBehaviour
         {
             inventory[2].sprite = empty;
         }
-        if (haveKey)
+        if (PublicVars.items["key"])
         {
             inventory[3].sprite = key;
         }
@@ -96,7 +97,7 @@ public class Inventory : MonoBehaviour
         {
             inventory[3].sprite = empty;
         }
-        if (haveBow)
+        if (PublicVars.items["bow"])
         {
             inventory[4].sprite = bow;
         }
