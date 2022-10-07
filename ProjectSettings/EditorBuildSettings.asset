@@ -18,6 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalRoom.unity
     guid: 2bc572856f145924dad9d328c77a394f
   - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: d19dbc4acf618844c93fd085dde35b28
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 844b2cdd49300fc4b8b3dd484a742afc
     path: Assets/Scenes/ClosingWalls.unity
     guid: 22877632d0492304b95bf4e03a179d8a
   - enabled: 1
