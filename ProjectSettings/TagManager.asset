@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Tile
   - Door
+  - Boots
+  - Goggles
+  - Bridge
+  - Key
+  - Monster
+  - Bow
   layers:
   - Default
   - TransparentFX

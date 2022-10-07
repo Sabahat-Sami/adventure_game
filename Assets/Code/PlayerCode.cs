@@ -9,6 +9,12 @@ public class PlayerCode : MonoBehaviour
     NavMeshAgent _agent;
     Camera mainCam;
 
+    public bool haveBoots = false;
+    public bool haveGoggles = false;
+    public bool haveBridge = false;
+    public bool haveKey = false;
+    public bool haveBow = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +44,41 @@ public class PlayerCode : MonoBehaviour
         if(other.CompareTag("Tile") && !other.GetComponent<TileScript>().isSafe){
             StartCoroutine(WaitBeforeFalling());
         }
+
+        switch (other.tag)
+        {
+            case "Boots":
+                Destroy(other.gameObject);
+                haveBoots = true;
+                break;
+
+            case "Bow":
+                Destroy(other.gameObject);
+                haveBow = true;
+                break;
+
+            case "Goggles":
+                Destroy(other.gameObject);
+                haveGoggles = true;
+                break;
+
+            case "Bridge":
+                Destroy(other.gameObject);
+                haveBridge = true;
+                break;
+
+            case "Key":
+                Destroy(other.gameObject);
+                haveKey = true;
+                break;
+
+            case "Monster":
+                break;
+            default:
+                break;
+        }
+
+
     }
     IEnumerator WaitBeforeFalling(){
         yield return new WaitForSeconds(1f);
