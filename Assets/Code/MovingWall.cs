@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovingWall : MonoBehaviour
 {
@@ -14,7 +15,17 @@ public class MovingWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        _rb.AddForce(0, -5, 0);
+        if(transform.eulerAngles.z == 90f){
+            _rb.velocity = new Vector3(-2, 0, 0);
+        }
+        else{
+            _rb.velocity = new Vector3(2, 0, 0);
+        }
 
+    }
+    private void OnTriggerEnter(Collider other) {
+        if(other.CompareTag("Player")){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

@@ -14,7 +14,9 @@ public class PlayerCode : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         mainCam = Camera.main;
-        
+        if(PublicVars.items["boots"]){
+            _agent.speed = 20f;
+        }
     }
 
     // Update is called once per frame
