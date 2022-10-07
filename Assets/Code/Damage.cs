@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageControl : MonoBehaviour
+public class Damage : MonoBehaviour
 {
     [SerializeField] private HealthControl health;
 
@@ -14,7 +14,7 @@ public class DamageControl : MonoBehaviour
         }
     }
 
-    public void damage()
+    void damage()
     {
         health.playerHealth -= 1;
         health.UpdateHealth();

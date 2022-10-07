@@ -13,12 +13,6 @@ TagManager:
   - Key
   - Monster
   - Bow
-  - ToMain
-  - ToGap
-  - ToExit
-  - ToMonster
-  - ToWallClose
-  - ToMaze
 
   layers:
   - Default
