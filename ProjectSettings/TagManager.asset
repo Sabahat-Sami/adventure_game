@@ -5,13 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tile
-  - Door
   - Boots
   - Goggles
   - Bridge
   - Key
   - Monster
   - Bow
+  - ToMain
+  - ToGap
+  - ToExit
+  - ToMonster
+  - ToWallClose
+  - ToMaze
   layers:
   - Default
   - TransparentFX
