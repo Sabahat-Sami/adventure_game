@@ -20,18 +20,10 @@ public class Inventory : MonoBehaviour
     public bool haveKey = false;
     public bool haveBow = false;
 
-    int speed = -25;
-
     private void Start()
     {
         updateInventory();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Rotate(0, speed*Time.deltaTime, 0, Space.World) ;      
     }
 
     private void OnTriggerEnter(Collider other)
