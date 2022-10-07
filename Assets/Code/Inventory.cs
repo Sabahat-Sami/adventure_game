@@ -60,7 +60,7 @@ public class Inventory : MonoBehaviour
         if (PublicVars.items["boots"])
         {
             inventory[0].sprite = boots;
-            inventory[0].transform.Rotate(new Vector3(0, 0, -90));
+            //inventory[0].transform.Rotate(new Vector3(0, 0, -90));
 
         }
         else{

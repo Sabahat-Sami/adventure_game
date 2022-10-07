@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731224, g: 0.38074207, b: 0.35872674, a: 1}
+  m_IndirectSpecularColor: {r: 0.37312183, g: 0.38074157, b: 0.35872602, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -191,6 +191,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1869720678, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 1201344055}
     - target: {fileID: 9154919726268840432, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -259,7 +263,8 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4180210184176086330, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
 --- !u!114 &163852477 stripped
 MonoBehaviour:
@@ -1299,6 +1304,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000011324147078, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
   m_PrefabInstance: {fileID: 1178172383}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1201344055 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5522136900032831105, guid: e50c4b953cbd54851a930c47be9ba27f, type: 3}
+  m_PrefabInstance: {fileID: 5083320045878483126}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee943463271e40d4a2a035437032e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1259585223 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7071502598602037335, guid: d3904b66be0b74df19758a5ad0bd0d06, type: 3}
@@ -1853,25 +1869,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9154919726268840436, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
   m_PrefabInstance: {fileID: 35809866}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1869720678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869720677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12c3629bbdcda274baac1d909a116ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damager: {fileID: 0}
-  main_lv_name: MainStage
-  gap_lv_name: GapRoom
-  wall_lv_name: 
-  maze_lv_name: FallingMaze
-  monster_lv_name: MonsterRoom
-  exit_lv_name: 
 --- !u!195 &1869720684
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1934,11 +1931,6 @@ MonoBehaviour:
   - {fileID: 1012579066}
   - {fileID: 888103870}
   - {fileID: 1259585223}
-  haveBoots: 0
-  haveGoggles: 0
-  haveBridge: 0
-  haveKey: 0
-  haveBow: 0
 --- !u!1001 &1934849770
 PrefabInstance:
   m_ObjectHideFlags: 0
