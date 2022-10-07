@@ -239,22 +239,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 9154919726268840436, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154919726268840436, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154919726268840438, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9154919726268840438, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
 --- !u!1 &286261987
@@ -5668,7 +5652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000014021913142, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
       propertyPath: m_TagString
-      value: Door
+      value: ToMain
       objectReference: {fileID: 0}
     - target: {fileID: 1000014021913142, guid: 6e160064d4d12e446ab9ded16202c5e9, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6120,6 +6104,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd7440ceab5bd244aad79580a2f7817, type: 3}
+
+=======
 --- !u!1 &1869720677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9154919726268840436, guid: a75ef745e45c343458e3e1b86e4dae47, type: 3}
@@ -6137,6 +6123,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c3629bbdcda274baac1d909a116ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damager: {fileID: 0}
+  main_lv_name: MainStage
+  gap_lv_name: GapRoom
+  wall_lv_name: 
+  maze_lv_name: FallingMaze
+  monster_lv_name: MonsterRoom
+  exit_lv_name: 
 --- !u!195 &1869720684
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6199,6 +6192,7 @@ MonoBehaviour:
   haveBridge: 0
   haveKey: 0
   haveBow: 0
+
 --- !u!1001 &1934849770
 PrefabInstance:
   m_ObjectHideFlags: 0
