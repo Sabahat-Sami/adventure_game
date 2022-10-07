@@ -21,13 +21,16 @@ public class PlayerCode : MonoBehaviour
     void Update()
     {
         if(Input.GetMouseButton(0))
-        {
+        {   
+
             RaycastHit hit;
             if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 500))
             {
+
                 _agent.SetDestination(hit.point);
             }
             else{
+                print("hello");
             }
         }
         if(this.gameObject.transform.position.y < -10){

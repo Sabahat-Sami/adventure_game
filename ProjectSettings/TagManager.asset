@@ -6,14 +6,15 @@ TagManager:
   tags:
   - Tile
   - Door
+  - MovingWall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - MovingWall
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
