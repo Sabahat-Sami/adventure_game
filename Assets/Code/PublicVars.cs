@@ -9,8 +9,6 @@ public static class PublicVars
         {"goggles", false},
         {"boots", false},
         {"chalice", false},
-        {"bow", false},
-        {"key", false}
     };
 
 }
