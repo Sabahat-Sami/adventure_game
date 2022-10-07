@@ -6,9 +6,11 @@ public static class PublicVars
 {
     public static Dictionary<string, bool> items = new Dictionary <string, bool>
     {
-        {"goggles", true},
+        {"goggles", false},
         {"boots", false},
         {"chalice", false},
+        {"bow", false},
+        {"key", false}
     };
 
 }
