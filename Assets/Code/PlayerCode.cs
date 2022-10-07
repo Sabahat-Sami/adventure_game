@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+
 public class PlayerCode : MonoBehaviour
 {
 
     NavMeshAgent _agent;
     Camera mainCam;
-    public HealthControl damager;
+    public HealthControl health;
+    public GameObject arrow;
 
     public string main_lv_name = "MainStage";
     public string gap_lv_name = "GapRoom";
-    public string wall_lv_name = "";
+    public string wall_lv_name = "ClosingWalls";
     public string maze_lv_name = "FallingMaze";
     public string monster_lv_name = "MonsterRoom";
     public string exit_lv_name = "";
+    int arrowForce = 500;
+    public string exit_lv_name = "FinalRoom";
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,7 @@ public class PlayerCode : MonoBehaviour
         mainCam = Camera.main;
         if(PublicVars.items["boots"]){
             _agent.speed = 15f;
+            _agent.acceleration = 60f;
         }
     }
 
@@ -38,6 +43,18 @@ public class PlayerCode : MonoBehaviour
             {
 
                 _agent.SetDestination(hit.point);
+            }
+
+        }
+        else if (Input.GetMouseButton(1) && PublicVars.items["bow"])
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(mainCam.ScreenPointToRay(Input.mousePosition), out hit, 500))
+            {
+                transform.LookAt(hit.point);
+                GameObject newArrow = Instantiate(arrow, transform.position, transform.rotation);
+                newArrow.GetComponent<Rigidbody>().AddForce(transform.forward * arrowForce);
             }
 
         }
@@ -64,6 +81,8 @@ public class PlayerCode : MonoBehaviour
         }
         if (other.CompareTag("ToWallClose"))
         {
+            print("HITTTT");
+            print(wall_lv_name);
             SceneManager.LoadScene(wall_lv_name);
         }
         if (other.CompareTag("ToMaze"))
@@ -72,12 +91,14 @@ public class PlayerCode : MonoBehaviour
         }
         if (other.CompareTag("ToExit"))
         {
-            SceneManager.LoadScene(exit_lv_name);
+            if(PublicVars.items["key"]){
+                SceneManager.LoadScene(exit_lv_name);
+            }
         }
         if(other.CompareTag("Gap")){
             Rigidbody player = GetComponent<Rigidbody>();
             player.isKinematic = false;
-            player.AddForce(-100f, 0f, 0f);
+            player.AddForce(-50f, 0f, 0f);
 
             GetComponent<NavMeshAgent>().enabled = false;
         }

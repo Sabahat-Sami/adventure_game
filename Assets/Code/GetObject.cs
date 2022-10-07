@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GetObject : MonoBehaviour
 {
@@ -23,10 +24,14 @@ public class GetObject : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-        print("Col");
         if(other.CompareTag("Player")){
             Destroy(this.gameObject);
             PublicVars.items[pub_name] = true;
+
+            if(pub_name == "boots")
+            {
+                other.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 15f;
+            }
         }
     }
 }
