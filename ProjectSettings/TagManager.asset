@@ -17,9 +17,6 @@ TagManager:
   - ToMonster
   - ToWallClose
   - ToMaze
-  - Door
-  - MovingWall
-  
   layers:
   - Default
   - TransparentFX

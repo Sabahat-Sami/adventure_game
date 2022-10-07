@@ -8,7 +8,15 @@ public class PlayerCode : MonoBehaviour
 
     NavMeshAgent _agent;
     Camera mainCam;
+    public HealthControl damager;
 
+    public string main_lv_name = "MainStage";
+    public string gap_lv_name = "GapRoom";
+    public string wall_lv_name = "";
+    public string maze_lv_name = "FallingMaze";
+    public string monster_lv_name = "MonsterRoom";
+    public string exit_lv_name = "";
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +46,35 @@ public class PlayerCode : MonoBehaviour
         if(other.CompareTag("Tile") && !other.GetComponent<TileScript>().isSafe){
             StartCoroutine(WaitBeforeFalling());
         }
+
+        if (other.CompareTag("ToMain"))
+        {
+            SceneManager.LoadScene(main_lv_name);
+        }
+        if (other.CompareTag("ToMonster"))
+        {
+            SceneManager.LoadScene(monster_lv_name);
+        }
+        if (other.CompareTag("ToGap"))
+        {
+            SceneManager.LoadScene(gap_lv_name);
+        }
+        if (other.CompareTag("ToWallClose"))
+        {
+            SceneManager.LoadScene(wall_lv_name);
+        }
+        if (other.CompareTag("ToMaze"))
+        {
+            SceneManager.LoadScene(maze_lv_name);
+        }
+        if (other.CompareTag("ToExit"))
+        {
+            SceneManager.LoadScene(exit_lv_name);
+        }
+
+
     }
+
     IEnumerator WaitBeforeFalling(){
         yield return new WaitForSeconds(1f);
         GetComponent<Rigidbody>().isKinematic = false;
