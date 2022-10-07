@@ -32,6 +32,10 @@ public class GetObject : MonoBehaviour
             {
                 other.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 15f;
             }
+            if(pub_name == "chalice")
+            {
+                SceneManager.LoadScene("EndScreen");
+            }
         }
     }
 }
