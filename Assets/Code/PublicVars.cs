@@ -14,4 +14,6 @@ public static class PublicVars
         {"bridge", false}
     };
 
+    public static int playerHealth = 3;
+
 }
